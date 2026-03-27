@@ -17,7 +17,7 @@ The musical.ly app (recommended version: 4.5.0)\
 Flex 2 (if your iOS version is 7 or 8), or Flex 3 (if your iOS version is 9)\
 **How to set it up (locally)**
 1. Download and install XAMPP from here: https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe
-2. Download this ZIP file containing the latest files from this repository and extract the contents of "youtube.ly-master" in "C:\xampp\htdocs": https://github.com/Venus5687/youtube.ly/archive/refs/heads/master.zip\
+2. Download this ZIP file containing the latest files from this repository and extract the contents of "youtube.ly-master" in "C:\xampp\htdocs": https://github.com/Venus5687/youtube.ly/archive/refs/heads/master.zip \
 Optional step: If you want to change the Invidious instance it uses (I recommend ones without a bot check), modify the /rest/v2/musicals/hot.php, /rest/v2/musicals/feed.php, and serve.php files, to use the instance you want instead of the default one (the default instance URL is "http://invidious.kemonomimi.nl").
 3. Put the YouTube channel IDs you want to show in the app in the "$channels" array in the /rest/v2/musicals/hot.php and /rest/v2/musicals/feed.php files.\
 To find a YouTube channel ID: search the channel's name in your favorite Invidious instance, then click on the channel, and the URL should look like this: https://(Invidious instance)/channel/(channel ID), after that, copy ONLY the channel ID part of the URL.
