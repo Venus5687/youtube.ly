@@ -53,12 +53,15 @@ The app should now be patched!
 **XAMPP throws errors when I try to do this!**
 <br>
 Make sure you ran the XAMPP Control Panel as an administrator.
+<br>
 **Flex 3 crashes when I try to process the app!**
 <br>
 Get an older beta version of Flex 3.
+<br>
 **The app can't connect to my server!**
 <br>
 Make sure that your legacy iOS device is connected to the same Wi-Fi network as the server.
+<br>
 **Some videos don't load!**
 <br>
 Try visiting the Invidious instance's URL in your web browser to see if it works.
