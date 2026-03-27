@@ -2,26 +2,9 @@
 
         header('Content-Type: application/json');
         echo json_encode([
-            "success" => true, "errorCode" => null, "errorMsg" => null, "errorTitle" => null,
+            "success" => true, "fallback" => false, "errorCode" => null, "errorMsg" => null, "errorTitle" => null,
             "advItems" => [], "result" => [
-                "admin" => false, "bid" => "0", "blocked" => false, "commentsNum" => 0,
-                "complimented" => false, "disabled" => false, "email" => "email@example.com",
-                "emailVerified" => false, "fansNum" => 0, "featuredScope" => 0,
-                "featuredTime" => 1754538451000, "followList" => [], "followNum" => 0,
-                "followed" => false, "following" => false, "gender" => "m",
-                "handle" => "placeholder", "handleModified" => 1754538451000,
-                "icon" => null, "inCn" => false, "password" => "123456", "instagramID" => null, "introduction" => null,
-                "likesNum" => 0, "musicalLikedNum" => 0, "musicalNum" => 0,
-                "musicalReadNum" => 0, "name" => "placeholder", "nickName" => "placeholder",
-                "phone" => null, "postNotify" => false, "readNum" => 0, "realName" => null,
-                "sociaMediaList" => [], "subscribeList" => [],
-                "userDesc" => "live with passion, live musical.ly", "userId" => 0,
-                "userRequestDTO" => ["follow" => false],
-                "userSettingDTO" => [
-                    "directAccount" => null, "duet" => false, "hideLocation" => false,
-                    "policyVersion" => 1, "privateChat" => false, "secret" => false, "userId" => 0
-                ],
-                "verified" => false
+                "userId" => 0, "userIdStr" => "0", "userIdBid" => "0", "emailVerified" => false, "nickName" => "930281", "displayName" => "930281", "icon" => null, "isFeatured" => false, "isPrivateAccount" => false, "addFriendWithoutConfirm" => false, "userDesc" => "live with passion, live musical.ly", "disabled" => false, "handle" => "930281", "insertTime" => date("Y-m-d H:i:s"), "followNum" => 0, "fansNum" => 0, "musicalNum" => 0, "privateMusicalNum" => 0, "musicalLikedNum" => 0, "likesNum" => 0, "livelyHearts" => 0, "directAccount" => "", "suspicious" => false, "shareUri" => "", "likesNumSelf" => 0, "videoIconURI" => "", "hideMessagePreview" => false, "disallowFindMeByHandle" => false, "disallowFindMeByNO" => false, "disallowFindMeByEmail" => false, "disallowFindMeByPhone" => false, "ageVerified" => true, "thirdUsers" => [], "gender" => "m", "verified" => false, "reviewer" => false, "admin" => false, "hideLocation" => false, "isPrivateChat" => false, "policyVersion" => 0, "countryCode" => "US", "languageCode" => "en_US", "timeZone" => "UTC", "source" => 0, "likeVisibleSetting" => 0, "email" => "email@example.com", "thirdUserDTOList" => [], "secureEmailStatus" => 0, "userApp" => [], "accountSecurityRisk" => 0
             ],
             "registered" => false, "timestamp" => 1754538451000, "fail" => false
         ]);
