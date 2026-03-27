@@ -57,5 +57,5 @@ Get an older beta version of Flex 3.\
 **The app can't connect to my server!**\
 Make sure that your legacy iOS device is connected to the same Wi-Fi network as the server.\
 **Some videos don't load!**\
-Try visiting the Invidious instance's URL in your web browser to see if it works.
+Try visiting the Invidious instance's URL in your web browser to see if it works.\
 If it works, unfortunately, the simplest solution to this is either waiting, or if they keep not loading, reinstall the app.
