@@ -19,7 +19,7 @@ Flex 2 (if your iOS version is 7 or 8), or Flex 3 (if your iOS version is 9)\
 1. Download and install XAMPP from here: https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe
 2. Download this ZIP file containing the latest files from this repository and extract the contents of "youtube.ly-master" in "C:\xampp\htdocs": https://github.com/Venus5687/youtube.ly/archive/refs/heads/master.zip \
 Optional step: If you want to change the Invidious instance it uses (I recommend ones without a bot check), modify the /rest/v2/musicals/hot.php, /rest/v2/musicals/feed.php, and serve.php files, to use the instance you want instead of the default one (the default instance URL is "http://invidious.kemonomimi.nl").
-3. Put the YouTube channel IDs you want to show in the app in the "$channels" array in the /rest/v2/musicals/hot.php and /rest/v2/musicals/feed.php files, and then in the same files, replace "localhost:4000" with ```(your computer's IP address):(server port)```.\
+3. Put the YouTube channel IDs you want to show in the app in the "$channels" array in the /rest/v2/musicals/hot.php and /rest/v2/musicals/feed.php files, and then in the same files, replace "localhost:4000" with ```http://(your computer's IP address):(server port)```.\
 To find a YouTube channel ID: search the channel's name in your favorite Invidious instance, then click on the channel, and the URL should look like this: https://(Invidious instance)/channel/(channel ID), after that, copy ONLY the channel ID part of the URL.
 4. Open the XAMPP Control Panel as an administrator because if you don't, it will throw an error on some actions like exiting the program.
 5. Start "Apache" by clicking the "Start" button next to the "Apache" text. If it gives a port error, open the file "C:\xampp\apache\conf\httpd.conf" and search for:
@@ -46,7 +46,7 @@ The server should now be set up!
 10. Now tap "Unit for -(void) setServerURL:(id)".
 11. Tap "pass-through" below the "Argument #1 (id)" text.
 12. Set "Override Type" to "NSString".
-13. Set "Override Value" to your server URL (so ```(your computer's IP address):(server port)```).
+13. Set "Override Value" to your server URL (so ```http://(your computer's IP address):(server port)```).
 14. Go all the way back and enable the patch.\
 The app should now be patched!
 # Troubleshooting
