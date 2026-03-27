@@ -1,0 +1,37 @@
+RewriteEngine On
+RewriteRule ^rest/musicals$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/musicals/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^musically/inspiration/inspiration_data.json$ rest/v2/musicals/feed.php [L]
+RewriteRule ^musically/inspirations/inspiration_data.json$ rest/v2/musicals/feed.php [L]
+RewriteRule ^login.do$ login.do.php [L]
+RewriteRule ^rest/v2/musicals/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/comments/$ rest/comments.json [L]
+RewriteRule ^rest/comments$ rest/comments.json [L]
+RewriteRule ^rest/v2/comments/$ rest/comments.json [L]
+RewriteRule ^rest/v2/comments$ rest/comments.json [L]
+RewriteRule ^rest/v2/musicals/hot$ rest/v2/musicals/hot.php [L]
+RewriteRule ^rest/v2/musicals/loop$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/nearby$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/top$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/musicals/hot$ rest/v2/musicals/hot.php [L]
+RewriteRule ^rest/musicals/top$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/hot/$ rest/v2/musicals/hot.php [L]
+RewriteRule ^rest/v2/musicals/loop/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/nearby/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/bytrack/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/bytrack$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/musicals/bytrack/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/musicals/bytrack$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/v2/musicals/top/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/musicals/hot/$ rest/v2/musicals/hot.php [L]
+RewriteRule ^rest/musicals/top/$ rest/v2/musicals/feed.php [L]
+RewriteRule ^rest/users/(\d+)$ rest/v2/users/number.php [L]
+RewriteRule ^rest/v2/users/(\d+)$ rest/v2/users/number.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^servevid/(.*)$ serve.php?vid=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ serve.php?url=$1 [L]
