@@ -32,7 +32,7 @@
     "musicalReadNum" => 0,
     "name" => "901902",
     "nickName" => "901902",
-    "password" => "$2a$10$LriiOgYCUIi4s4GoOzdh5Ovtqut7xFow19LkQnAJMXhQF8PJ0UI0S",
+    "password" => '$2a$10$LriiOgYCUIi4s4GoOzdh5Ovtqut7xFow19LkQnAJMXhQF8PJ0UI0S',
     "phone" => "",
     "postNotify" => false,
     "readNum" => 0,
