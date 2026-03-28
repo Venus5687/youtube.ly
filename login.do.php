@@ -4,8 +4,57 @@
         echo json_encode([
             "success" => true, "fallback" => false, "errorCode" => null, "errorMsg" => null, "errorTitle" => null,
             "advItems" => [], "result" => [
-                "userId" => 0, "userIdStr" => "0", "userIdBid" => "0", "emailVerified" => false, "nickName" => "930281", "displayName" => "930281", "icon" => null, "isFeatured" => false, "isPrivateAccount" => false, "addFriendWithoutConfirm" => false, "userDesc" => "live with passion, live musical.ly", "disabled" => false, "handle" => "930281", "insertTime" => date("Y-m-d H:i:s"), "followNum" => 0, "fansNum" => 0, "musicalNum" => 0, "privateMusicalNum" => 0, "musicalLikedNum" => 0, "likesNum" => 0, "livelyHearts" => 0, "directAccount" => "", "suspicious" => false, "shareUri" => "", "likesNumSelf" => 0, "videoIconURI" => "", "hideMessagePreview" => false, "disallowFindMeByHandle" => false, "disallowFindMeByNO" => false, "disallowFindMeByEmail" => false, "disallowFindMeByPhone" => false, "ageVerified" => true, "thirdUsers" => [], "gender" => "m", "verified" => false, "reviewer" => false, "admin" => false, "hideLocation" => false, "isPrivateChat" => false, "policyVersion" => 0, "countryCode" => "US", "languageCode" => "en_US", "timeZone" => "UTC", "source" => 0, "likeVisibleSetting" => 0, "email" => "email@example.com", "thirdUserDTOList" => [], "secureEmailStatus" => 0, "userApp" => [], "accountSecurityRisk" => 0
-            ],
+    "admin" => false,
+    "bid" => "1",
+    "blocked" => false,
+    "commentsNum" => 0,
+    "complimented" => false,
+    "disabled" => false,
+    "email" => "example@example.com",
+    "emailVerified" => false,
+    "fansNum" => 0,
+    "featuredScope" => 0,
+    "featuredTime" => "2024-12-01T00:00:00Z",
+    "followList" => [],
+    "followNum" => 0,
+    "followed" => false,
+    "following" => false,
+    "gender" => "male",
+    "handle" => "901902",
+    "handleModified" => "2024-12-01T00:00:00Z",
+    "icon" => "",
+    "inCn" => false,
+    "instagramID" => "901902",
+    "introduction" => "",
+    "likesNum" => 0,
+    "musicalLikedNum" => 0,
+    "musicalNum" => 0,
+    "musicalReadNum" => 0,
+    "name" => "901902",
+    "nickName" => "901902",
+    "password" => "$2a$10$LriiOgYCUIi4s4GoOzdh5Ovtqut7xFow19LkQnAJMXhQF8PJ0UI0S",
+    "phone" => "",
+    "postNotify" => false,
+    "readNum" => 0,
+    "realName" => "",
+    "reviewer" => false,
+    "sociaMediaList" => [],
+    "subscribeList" => [],
+    "userDesc" => "live with passion, live musical.ly",
+    "userId" => 0,
+    "userSettingDTO" => [
+        "userId" => 0,
+        "secret" => false,
+        "duet" => false,
+        "hideLocation" => false,
+        "privateChat" => false,
+        "policyVersion" => 1
+    ],
+    "userRequestDTO" => [
+        "follow" => false
+    ],
+    "verified" => false
+],
             "registered" => false, "timestamp" => 1754538451000, "fail" => false
         ]);
 ?>
