@@ -1,5 +1,9 @@
 {
+    "name": "Venus5687/youtube.ly",
+    "description": "A very unstable, YouTube Shorts to Musical.ly proxy server.",
+    "license": "MIT",
     "require": {
+        "php": "^8.0",
         "ext-curl": "*",
         "ext-json": "*"
     }
