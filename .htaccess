@@ -26,8 +26,8 @@ RewriteRule ^rest/musicals/bytrack$ rest/v2/musicals/feed.php [L]
 RewriteRule ^rest/v2/musicals/top/$ rest/v2/musicals/feed.php [L]
 RewriteRule ^rest/musicals/hot/$ rest/v2/musicals/hot.php [L]
 RewriteRule ^rest/musicals/top/$ rest/v2/musicals/feed.php [L]
-RewriteRule ^rest/users/(\d+)$ rest/v2/users/number.php [L]
-RewriteRule ^rest/v2/users/(\d+)$ rest/v2/users/number.php [L]
+RewriteRule ^rest/users/(.*)$ rest/v2/users/number.php [L]
+RewriteRule ^rest/v2/users/(.*)$ rest/v2/users/number.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^servevid/(.*)$ serve.php?vid=$1 [L]
