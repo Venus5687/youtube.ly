@@ -50,6 +50,14 @@ The server should now be set up!
 13. Set "Override Value" to your server URL (so ```http://(your computer's IP address):(server port)```).
 14. Go all the way back and enable the patch.\
 The app should now be patched!
+# Video Tutorial (for iOS 7 and 8)
+
+
+https://github.com/user-attachments/assets/1842f151-0b17-4930-b10e-970c7f6957bd
+
+
+# Video Tutorial (for iOS 9 and newer)
+Coming soon.
 # Troubleshooting
 **XAMPP throws errors when I try to do this!**\
 Make sure you ran the XAMPP Control Panel as an administrator.\
