@@ -51,7 +51,7 @@ The server should now be set up!
 14. Go all the way back and enable the patch.\
 The app should now be patched!
 # Video Tutorial (for iOS 7 and 8)
-
+This video tutorial assumes you already have XAMPP installed.\
 
 https://github.com/user-attachments/assets/1842f151-0b17-4930-b10e-970c7f6957bd
 
