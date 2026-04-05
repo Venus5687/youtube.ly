@@ -1,11 +1,12 @@
 <?php
 
         header('Content-Type: application/json');
+		if ($_POST["email"] == "example@example.com" OR $_POST["email"] == "@820182" AND $_POST["password"] == "123456") {
         echo json_encode([
     "success"    => true,
-    "errorCode"  => null,
-    "errorMsg"   => null,
-    "errorTitle" => null,
+    "errorCode"  => "200",
+    "errorMsg"   => "ok",
+    "errorTitle" => "ok",
     "advItems"   => [],
 	"result" => [
 	    "userId"             => 1,
@@ -15,7 +16,7 @@
 	    "realName"           => "820182",
 	    "handle"             => "820182",
 	    "email"              => "example@example.com",
-	    "password"           => null,
+	    "password"           => '$2a$12$I9onfXZY7Kms15VDWlgtGu8Zo5V1a0ntqfh5cu8JOtCn7EwDg8AD6',
 	    "phone"              => null,
 	    "icon"               => null,
 	    "gender"             => "m",
@@ -73,7 +74,7 @@
 	        "follow" => false
 	    ],
 	    "userSettingDTO"     => [
-	        "userId"        => (int)$row["id"],
+	        "userId"        => 1,
 	        "secret"        => false,
 	        "duet"          => false,
 	        "hideLocation"  => false,
@@ -91,4 +92,16 @@
     "timestamp"  => 1754538451000,
     "fail"       => false
 ]);
+} else {
+        echo json_encode([
+    "success"    => false,
+    "errorCode"  => "403",
+    "errorMsg"   => "Invalid username or password.",
+    "errorTitle" => "Login error",
+    "advItems"   => [],
+	"result" => [],
+    "timestamp"  => 1754538451000,
+    "fail"       => true
+]);
+}
 ?>
