@@ -4,7 +4,7 @@ set_time_limit(120);
 $instance = "http://invidious.kemonomimi.nl";
 // proper config hasn't been done yet so insert your target channel ids here
 $channels = [
-
+	
 ];
 
 $allVideos = [];
@@ -272,8 +272,8 @@ $finalResponse = [
         "number" => 0,
         "size" => count($musicalArray),
         "totalPages" => 1,
-	    "numberOfElements" => count($musicalArray),
         "totalElements" => count($musicalArray),
+		"numberOfElements" => count($musicalArray),
         "firstPage" => true,
         "lastPage" => true
     ],
