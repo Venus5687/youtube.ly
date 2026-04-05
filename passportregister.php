@@ -19,7 +19,7 @@
       "userDesc": "live with passion, live musical.ly",
       "disabled": false,
       "handle": "921201",
-      "password": "$2a$12$I9onfXZY7Kms15VDWlgtGu8Zo5V1a0ntqfh5cu8JOtCn7EwDg8AD6",
+      "password": null,
       "insertTime": 0,
       "followNum": 0,
       "fansNum": 0,
