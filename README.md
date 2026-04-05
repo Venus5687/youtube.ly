@@ -70,4 +70,5 @@ Make sure that your legacy iOS device is connected to the same Wi-Fi network as 
 Try visiting the Invidious instance's URL in your web browser to see if it works.\
 If it works, unfortunately, the simplest solution to this is either waiting, or if they keep not loading, reinstall the app.\
 **I am stuck on the log in screen!**\
-Use version 4.5.0, it has the "explore first" button, which you can tap to enter the app without logging in.
+Try entering "example@example.com" as the email and "123456" as the password.\
+If that doesn't work, use version 4.5.0, it has the "explore first" button, which you can tap to enter the app without logging in.
