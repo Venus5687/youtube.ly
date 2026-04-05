@@ -129,8 +129,8 @@ $finalResponse = [
         "number" => 0,
         "size" => count($musicalArray),
         "totalPages" => 1,
-        "numberOfElements" => count($musicalArray),
         "totalElements" => count($musicalArray),
+		"numberOfElements" => count($musicalArray),
         "firstPage" => true,
         "lastPage" => true
     ],
