@@ -6,7 +6,7 @@ A very unstable, YouTube Shorts to Musical.ly proxy server.
 It gets the latest YouTube Shorts from the specified channels, and then translates the format Invidious gives to the format the musical.ly app wants.
 # Known bugs
 The app may display "original sound" with the wrong creator's name in the track name (fixed for versions that use the "v2" endpoint, like version 4.5.0).\
-Login does not work.\
+Login does not work (fixed).\
 Placeholder top tracks and placeholder comments don't display.
 # Known working app versions
 3.0.1: working\
