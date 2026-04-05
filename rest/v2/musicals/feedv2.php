@@ -4,7 +4,7 @@ set_time_limit(120);
 $instance = "http://invidious.kemonomimi.nl";
 // proper config hasn't been done yet so insert your target channel ids here
 $channels = [
-    
+
 ];
 
 $allVideos = [];
@@ -49,6 +49,93 @@ foreach ($allVideos as $video) {
     $title = $video['title'] ?? 'No Title';
 
     // proper config hasn't been done yet so replace the url with your server's url
+	$headers = getallheaders();
+	if (str_starts_with($headers['version'], "5.")) {
+		$item = [
+		    "musicalId"        => $currentId,
+		    "musicalIdStr"     => (string)$currentId,
+		    "caption"          => $title,
+		    "width"            => 360,
+		    "height"           => 640,
+		    "videoUri"         => "http://localhost:4000/servevid/" . $videoId . ".mp4",
+		    "thumbnailUri"     => "http://localhost:4000/musicals/thumb.png",
+		    "startTime"        => 0,
+		    "track"            => [
+		        "trackId"   => (int)$num_str,
+		        "foreignId" => $num_str,
+		        "source"    => "mu",
+		        "previewUri"=> null,
+		        "sequence"  => 0,
+		        "author"    => [
+		            "artistId"  => (int)$num_str,
+		            "foreignId" => $num_str,
+		            "source"    => "mu",
+		            "name"      => "original sound"
+		        ],
+		        "song"      => [
+		            "songId"    => (int)$num_str,
+		            "foreignId" => $num_str,
+		            "source"    => "mu",
+		            "title"     => $authorName
+		        ],
+		        "album"     => [
+		            "albumId"      => (int)$num_str,
+		            "foreignId"    => $num_str,
+		            "source"       => "mu",
+		            "title"        => "original sound",
+		            "thumbnailUri" => null
+		        ]
+		    ],
+		    "trackId"          => (int)$num_str,
+		    "author"           => [
+		        "userId"        => (int)$num_str,
+		        "userIdStr"     => $num_str,
+		        "name"          => $authorName,
+		        "nickName"      => $authorName,
+		        "realName"      => $authorName,
+		        "handle"        => $authorName,
+		        "icon"          => null,
+		        "gender"        => "m",
+		        "verified"      => false,
+		        "featuredScope" => 0,
+		        "bid"           => $num_str,
+		        "disabled"      => false,
+		        "emailVerified" => false,
+		        "userSettingDTO" => [
+		            "userId"        => (int)$num_str,
+		            "secret"        => false,
+		            "duet"          => false,
+		            "hideLocation"  => false,
+		            "privateChat"   => false,
+		            "policyVersion" => 1
+		        ],
+		        "userRequestDTO" => [
+		            "follow" => false
+		        ]
+		    ],
+		    "authorId"         => (int)$num_str,
+		    "status"           => 2,
+		    "promoted"         => false,
+		    "promoteType"      => 0,
+		    "indexTime"        => 1774279955000,
+		    "liked"            => false,
+		    "owned"            => false,
+		    "likedNum"         => 0,
+		    "readNum"          => 0,
+		    "commentNum"       => 0,
+		    "remixFrom"        => 0,
+		    "musicalSource"    => "MLServer",
+		    "clientCreateTime" => 1771787350000,
+		    "bid"              => (string)$currentId,
+		    "videoSource"      => 1,
+		    "appliedFilter"    => null,
+		    "appVersion"       => "3.5.1",
+		    "ost"              => false,
+		    "musicalType"      => 0,
+		    "duet"             => false,
+		    "createdInCn"      => false
+		];
+} else {
 	$item = [
 	    "musicalId"              => $currentId,
 	    "musicalIdStr"           => (string)$currentId,
@@ -167,7 +254,7 @@ foreach ($allVideos as $video) {
 	    "appliedFilter"          => null,
 	    "bid"                    => (string)$currentId
 	];
-
+}
     $musicalArray[] = $item;
     $num_str = sprintf("%06d", mt_rand(10000, 999999));
     $currentId++;
