@@ -4,14 +4,7 @@ set_time_limit(120);
 $instance = "http://invidious.kemonomimi.nl";
 // proper config hasn't been done yet so insert your target channel ids here
 $channels = [
-    "UCeKLuqGciqZZ5RFYk5CbqXg", 
-    "UCGfv8UBMJqT8vJO0L-OqH_w",
-    "UC4Z8mPYjn6Dhr6n531YDh0Q",
-    "UCyUFqqpJskoLfILYzyeIkWA",
-    "UCfZE3QN9ZJuvwvAg7A0aTEA",
-    "UC34SFOOp9QiG_h8IbJA0CUQ",
-    "UCxVNTYSYaBXIqhhEURbYZLA",
-	"UC6o-2R-A2uqGZTJs0h4tVQA"
+    
 ];
 
 $allVideos = [];
@@ -62,11 +55,11 @@ foreach ($allVideos as $video) {
 	    "caption"                => $title,
 	    "width"                  => 360,
 	    "height"                 => 640,
-	    "videoUri"               => "http://192.168.120.21:8080/servevid/" . $videoId . ".mp4",
+	    "videoUri"               => "http://localhost:4000/servevid/" . $videoId . ".mp4",
 	    "lowQualityVideoUri"     => null,
 	    "middleQualityVideoUri"  => null,
 	    "previewUrl"             => null,
-	    "thumbnailUri"           => "http://192.168.120.21:8080/musicals/thumb.png",
+	    "thumbnailUri"           => "http://localhost:4000/musicals/thumb.png",
 	    "thumbnailOriginalUri"   => null,
 	    "thumbnailOriginalWidth" => 0,
 	    "thumbnailOriginalHeight"=> 0,
