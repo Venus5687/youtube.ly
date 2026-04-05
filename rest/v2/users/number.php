@@ -1,5 +1,6 @@
 <?php
 $num_str = sprintf("%06d", mt_rand(10000, 999999));
+$bid = base64_encode((string)$num_str);
 header('Content-Type: application/json');
 echo json_encode([
     "success"    => true,
@@ -19,7 +20,7 @@ echo json_encode([
 	    "phone"              => null,
 	    "icon"               => null,
 	    "gender"             => "m",
-	    "bid"                => "1",
+	    "bid"                => $bid,
 	    "admin"              => false,
 	    "blocked"            => false,
 	    "disabled"           => false,
