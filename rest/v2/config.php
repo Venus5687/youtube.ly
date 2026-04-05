@@ -2,9 +2,7 @@
 if ($_GET["key"] == "topSong") {
 header('Content-Type: application/json');
 echo json_encode([
-    "success"   => true,
-    "result"    => [
-        [
+    [
             "trackId"  => 1,
             "song"     => "New Friendly",
             "author"   => "Kevin MacLeod",
@@ -25,8 +23,11 @@ echo json_encode([
             "champion" => "Kevin MacLeod",
             "cover"    => null
 		]
-    ],
-    "timestamp" => round(microtime(true) * 1000)
+    
 ]);
+} else if ($_GET["key"] == "parameters") {
+	header('Content-Type: application/json');
+
+	echo "";
 }
 ?>
