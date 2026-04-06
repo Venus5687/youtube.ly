@@ -11,7 +11,10 @@ Placeholder top tracks don't display (comments have been fixed, and they're not 
 # Known working app versions
 3.0.1: working\
 4.0.0: working\
-4.5.0: working
+4.4.5: working\
+4.5.0: working\
+5.0.0: extremely unstable\
+Any version after 5.0.0: I can't find a way on how to patch them with Flex currently, so currently not working
 # How to set the server up
 **Requirements**\
 A legacy iOS device (recommended iOS versions: 7.x, 8.x, 9.x)\
