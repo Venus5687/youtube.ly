@@ -1,4 +1,6 @@
 <?php
+$mids = [];
+	$ids = [];
 set_time_limit(120); 
 // proper config hasn't been done yet so if you want a different instance (must not have a bot check), replace the url with the instance you want
 $instance = "http://invidious.kemonomimi.nl";
@@ -113,11 +115,16 @@ foreach ($allVideos as $video) {
     ];
 
     $musicalArray[] = $item;
+	$mids[] = (string)$currentId;
+	$ids[] = $videoId;
     $num_str = sprintf("%06d", mt_rand(10000, 999999));
     $currentId++;
 }
 
-
+$export = "<?php\n";
+$export .= "\$mids = " . var_export($mids, true) . ";\n";
+$export .= "\$ids = " . var_export($ids, true) . ";\n";
+file_put_contents('../../idsForComments.php', $export);
 shuffle($musicalArray);
 
 
