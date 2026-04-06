@@ -1,5 +1,10 @@
 <?php
-
+setcookie('SLIDER_SHOW_COOKIE', 'musically_session_' . $userId, [
+    'expires'  => time() + (86400 * 30),
+    'path'     => '/',
+    'httponly' => false,
+    'samesite' => 'Lax'
+]);
         header('Content-Type: application/json');
         echo '{"success":true,"fallback":false,"result":{"userProfile":{"userId":1,"userIdStr":"1","userIdBid":"921201","emailVerified":true,"nickName":"921201","displayName":"921201","icon":null,"isFeatured":true,"isPrivateAccount":false,"addFriendWithoutConfirm":true,"userDesc":"live with passion, live musical.ly","disabled":false,"handle":"921201","password":null,"insertTime":0,"followNum":0,"fansNum":0,"musicalNum":0,"privateMusicalNum":0,"musicalLikedNum":0,"likesNum":0,"livelyHearts":0,"directAccount":"921201","suspicious":false,"shareUri":"https://example.com","likesNumSelf":0,"videoIconURI":null,"hideMessagePreview":true,"disallowFindMeByHandle":true,"disallowFindMeByNO":true,"disallowFindMeByEmail":true,"disallowFindMeByPhone":true,"ageVerified":true,"thirdUsers":[],"gender":"male","verified":true,"reviewer":false,"admin":false,"hideLocation":false,"isPrivateChat":true,"policyVersion":1,"countryCode":"US","languageCode":"EN","timeZone":"UTC","source":1,"likeVisibleSetting":1,"email":"example@example.com","thirdUserDTOList":[],"secureEmailStatus":1,"featured":true,"userApp":[],"accountSecurityRisk":0},"registered":true},"timestamp":1775400324000,"fail":false}'
 ?>

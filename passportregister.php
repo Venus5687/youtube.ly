@@ -1,5 +1,10 @@
 <?php
-
+setcookie('SLIDER_SHOW_COOKIE', 'musically_session_' . $userId, [
+    'expires'  => time() + (86400 * 30),
+    'path'     => '/',
+    'httponly' => false,
+    'samesite' => 'Lax'
+]);
         header('Content-Type: application/json');
         echo '{
   "success": true,
