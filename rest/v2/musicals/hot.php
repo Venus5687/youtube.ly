@@ -6,7 +6,7 @@ set_time_limit(120);
 $instance = "http://invidious.kemonomimi.nl";
 // proper config hasn't been done yet so insert your target channel ids here
 $channels = [
-    
+	
 ];
 
 $allVideos = [];
@@ -44,11 +44,11 @@ if (is_array($videos)) {
 
 foreach ($allVideos as $video) {
     $num_str = sprintf("%06d", mt_rand(10000, 999999));
-    if ($currentId == 12) $currentId++;
 
     $authorName = $video['author'] ?? 'Unknown';
     $videoId = $video['videoId'] ?? '';
     $title = $video['title'] ?? 'No Title';
+    $chId = $video['authorId'] ?? '';
 
     // proper config hasn't been done yet so replace the url with your server's url
     $item = [
@@ -60,9 +60,9 @@ foreach ($allVideos as $video) {
         "thumbnailUri" => "http://localhost:4000/musicals/thumb.png",
         "startTime" => 0,
         "author" => [
-            "bid" => $num_str,
+            "bid" => $chId,
             "handle" => $authorName,
-            "icon" => null,
+            "icon" => "http://localhost:4000/servepfp/" . $chId,
             "name" => $authorName,
             "nickName" => $authorName,
             "userId" => (int)$num_str
