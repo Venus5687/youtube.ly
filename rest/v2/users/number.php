@@ -72,7 +72,7 @@ if (isset($_GET["chid"]) && str_starts_with($_GET["chid"], "UC")) {
 		    "musicalLikedNum"    => 0,
 		    "musicalReadNum"     => 0,
 		    "likesNum"           => 0,
-		    "fansNum"            => 0,
+		    "fansNum"            => $chid["subCount"],
 		    "followNum"          => 0,
 		    "commentsNum"        => 0,
 		    "readNum"            => 0,
