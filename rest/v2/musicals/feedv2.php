@@ -1,5 +1,6 @@
 <?php
-$mids = [];
+
+	$mids = [];
 	$ids = [];
 set_time_limit(120); 
 // proper config hasn't been done yet so if you want a different instance (must not have a bot check), replace the url with the instance you want
@@ -44,12 +45,11 @@ if (is_array($videos)) {
 
 foreach ($allVideos as $video) {
     $num_str = sprintf("%06d", mt_rand(10000, 999999));
-    if ($currentId == 12) $currentId++;
 
     $authorName = $video['author'] ?? 'Unknown';
     $videoId = $video['videoId'] ?? '';
     $title = $video['title'] ?? 'No Title';
-
+    $chId = $video['authorId'] ?? '';
     // proper config hasn't been done yet so replace the url with your server's url
 	$headers = getallheaders();
 	if (str_starts_with($headers['version'], "5.")) {
@@ -91,16 +91,16 @@ foreach ($allVideos as $video) {
 		    "trackId"          => (int)$num_str,
 		    "author"           => [
 		        "userId"        => (int)$num_str,
-		        "userIdStr"     => $num_str,
+		        "userIdStr"     => $chId,
 		        "name"          => $authorName,
 		        "nickName"      => $authorName,
 		        "realName"      => $authorName,
 		        "handle"        => $authorName,
-		        "icon"          => null,
+		        "icon"          => "http://localhost:4000/servepfp/" . $chId,
 		        "gender"        => "m",
 		        "verified"      => false,
 		        "featuredScope" => 0,
-		        "bid"           => $num_str,
+		        "bid"           => $chId,
 		        "disabled"      => false,
 		        "emailVerified" => false,
 		        "userSettingDTO" => [
@@ -191,16 +191,16 @@ foreach ($allVideos as $video) {
 	    "trackId"                => (int)$num_str,
 	    "author"                 => [
 	        "userId"         => (int)$num_str,
-	        "userIdStr"      => $num_str,
+	        "userIdStr"      => $chId,
 	        "name"           => $authorName,
 	        "nickName"       => $authorName,
 	        "realName"       => $authorName,
 	        "handle"         => $authorName,
-	        "icon"           => null,
+	        "icon"           => "http://localhost:4000/servepfp/" . $chId,
 	        "gender"         => "m",
 	        "verified"       => false,
 	        "featuredScope"  => 0,
-	        "bid"            => $num_str,
+	        "bid"            => $chId,
 	        "disabled"       => false,
 	        "emailVerified"  => false,
 	        "userSettingDTO" => [
