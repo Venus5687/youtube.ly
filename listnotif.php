@@ -55,7 +55,7 @@ echo '{
 	"refImgPath": null,
 	"subNotifyType": 0,
 	"subject": "Welcome!",
-	"url": null
+	"url": "https://github.com/Venus5687/youtube.ly"
             }
         ],
         "total": 0,
