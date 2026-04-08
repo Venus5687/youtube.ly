@@ -32,7 +32,7 @@ if (isset($_GET["chid"]) && str_starts_with($_GET["chid"], "UC")) {
 		    "email"              => "example@example.com",
 		    "password"           => null,
 		    "phone"              => null,
-		    "icon"               => "http://192.168.120.21:8080/servepfp/" . $_GET["chid"],
+		    "icon"               => "http://localhost:4000/servepfp/" . $_GET["chid"],
 		    "gender"             => "m",
 		    "bid"                => $bid,
 		    "admin"              => false,
