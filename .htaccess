@@ -1,4 +1,6 @@
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
 RewriteRule ^rest/musicals$ rest/v2/musicals/feed.php [L]
 RewriteRule ^rest/v2/musicals$ rest/v2/musicals/feedv2.php [L]
 RewriteRule ^rest/v2/config$ rest/v2/config.php [L]
@@ -32,12 +34,18 @@ RewriteRule ^rest/musicals/bytrack$ rest/v2/musicals/feed.php [L]
 RewriteRule ^rest/v2/musicals/top/$ rest/v2/musicals/feedv2.php [L]
 RewriteRule ^rest/musicals/hot/$ rest/v2/musicals/hot.php [L]
 RewriteRule ^rest/musicals/top/$ rest/v2/musicals/feed.php [L]
-RewriteRule ^rest/users/(.*)$ rest/v2/users/number.php [L]
-RewriteRule ^rest/v2/users/(.*)$ rest/v2/users/number.php [L]
+RewriteRule ^rest/users/me$ rest/v2/users/number.php?chid=1 [L]
+RewriteRule ^rest/v2/users/me$ rest/v2/users/number.php?chid=1 [L]
+RewriteRule ^rest/users/listNotifications$ listnotif.php [L]
+RewriteRule ^rest/v2/users/listNotifications$ listnotif.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^rest/users/(.*)$ rest/v2/users/number.php?chid=$1 [L]
+RewriteRule ^rest/v2/users/(.*)$ rest/v2/users/number.php?chid=$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^servevid/(.*)$ serve.php?vid=$1 [L]
-
+RewriteRule ^servepfp/(.*)$ serve.php?chid=$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ serve.php?url=$1 [L]
+RewriteRule ^(.*)$ serve.php?url=$1 [L,QSA]
