@@ -17,6 +17,31 @@ if (isset($_GET["vid"])) {
     curl_close($curlSES);
     header('Content-Type: video/mp4');
     echo $vid;
+    } else if (isset($_GET["chid"])) {
+    $url = $_GET["chid"];
+    $curlSES = curl_init();
+	// proper config hasn't been done yet so if you want a different instance (must not have a bot check), replace the url with the instance you want
+    curl_setopt($curlSES, CURLOPT_URL, "http://invidious.kemonomimi.nl/api/v1/channels/" . urlencode($url));
+    curl_setopt($curlSES, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curlSES, CURLOPT_HEADER, false);
+    curl_setopt($curlSES, CURLOPT_FOLLOWLOCATION, true); 
+    curl_exec($curlSES);
+    $finalUrl = curl_getinfo($curlSES, CURLINFO_EFFECTIVE_URL); 
+    curl_setopt($curlSES, CURLOPT_URL, $finalUrl);
+    $chid = curl_exec($curlSES);
+	$chid = json_decode($chid, true);
+    curl_close($curlSES);
+    curl_setopt($curlSES, CURLOPT_URL, $chid["authorThumbnails"][3]["url"]);
+    curl_setopt($curlSES, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curlSES, CURLOPT_HEADER, false);
+    curl_setopt($curlSES, CURLOPT_FOLLOWLOCATION, true); 
+    curl_exec($curlSES);
+    $finalUrl = curl_getinfo($curlSES, CURLINFO_EFFECTIVE_URL); 
+    curl_setopt($curlSES, CURLOPT_URL, $finalUrl);
+    $image = curl_exec($curlSES);
+    curl_close($curlSES);
+	header('Content-Type: image/jpeg');
+    echo $image;
     } else if (str_ends_with($_GET["url"], '.mp4')) {
 $file = $_GET["url"];
 $fp = fopen($file, 'rb');
@@ -54,3 +79,4 @@ echo $homepage;
 }
 
 ?>
+
