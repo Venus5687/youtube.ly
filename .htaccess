@@ -3,6 +3,8 @@ RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 RewriteRule ^rest/musicals$ rest/v2/musicals/feed.php [L]
 RewriteRule ^rest/v2/musicals$ rest/v2/musicals/feedv2.php [L]
+RewriteRule ^rest/v2/musicals/feeds$ rest/v2/musicals/feedv2.php [L]
+RewriteRule ^rest/v2/musicals/popular$ rest/v2/musicals/feedv2.php [L]
 RewriteRule ^rest/v2/config$ rest/v2/config.php [L]
 RewriteRule ^rest/musicals/$ rest/v2/musicals/feed.php [L]
 RewriteRule ^rest/v2/tags/findTag$ rest/v2/ftag.php [L]
