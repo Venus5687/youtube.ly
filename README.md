@@ -70,8 +70,8 @@ Try visiting the Invidious instance's URL in your web browser to see if it works
 If it works, unfortunately, the simplest solution to this is either waiting, or if they keep not loading, reinstall the app.\
 **I am stuck on the log in screen!**\
 Try entering "example@example.com" as the email and "123456" as the password.\
-If that doesn't work, use version 4.5.0, it has the "explore first" button, which you can tap to enter the app without logging in.
+If that doesn't work, use version 4.5.0, it has the "explore first" button, which you can tap to enter the app without logging in.\
 **Musical.ly says "Network Issue" when logging in!**\
-From what I have seen, there are two reasons why this may occur:\
+From what I have seen, there are two reasons why this may occur:
 1. PHP Warnings: PHP Warnings can cause the server's responses to be not valid for the Musical.ly app, because they show up in the server's responses. To fix this, open the file "C:\xampp\php\php.ini" in Notepad, and search for these strings: ```error_reporting=E_ALL & ~E_DEPRECATED & ~E_STRICT```, ```display_errors=On```, ```display_startup_errors=On``` and replace them with ```error_reporting=E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR```, ```display_errors=Off```, ```display_startup_errors=Off```, then save the file and restart the server.
 2. Wi-Fi conflict: If you have multiple Wi-Fi networks (example: one for high speed Wi-Fi and one for normal speed Wi-Fi), try connecting to another one of your Wi-Fi networks on your iDevice and then try logging in again.
