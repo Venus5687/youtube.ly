@@ -27,16 +27,8 @@ Optional step: If you want to change the Invidious instance it uses (I recommend
 3. Put the YouTube channel IDs you want to show in the app in the "$channels" array in the /rest/v2/musicals/hot.php, /rest/v2/musicals/feedv2.php and /rest/v2/musicals/feed.php files, and then in the same files, and also /rest/v2/users/number.php and /rest/comments.php, replace "http://localhost:4000" with ```http://(your computer's IP address):(server port)```.\
 To find a YouTube channel ID: search the channel's name in your favorite Invidious instance, then click on the channel, and the URL should look like this: https://(Invidious instance)/channel/(channel ID), after that, copy ONLY the channel ID part of the URL.
 4. Open the XAMPP Control Panel as an administrator because if you don't, it will throw an error on some actions like exiting the program.
-5. Start "Apache" by clicking the "Start" button next to the "Apache" text. If it gives a port error, open the file "C:\xampp\apache\conf\httpd.conf" and search for:
-```
-Listen 80
-ServerName localhost:80
-```
-And replace it with:
-```
-Listen 4000
-ServerName localhost:4000
-```
+5. Start "Apache" by clicking the "Start" button next to the "Apache" text. If it gives a port error, open the file "C:\xampp\apache\conf\httpd.conf", search for: ```80``` and replace all occurrences of it with ```4000```.
+If it still gives a port error, open the file "C:\xampp\apache\conf\extra\httpd-ssl.conf", search for: ```443``` and replace all occurrences of it with ```441```.
 The server should now be set up!
 # Patching the app (with Flex)
 1. Open Flex 2 or Flex 3.
@@ -61,7 +53,11 @@ https://github.com/user-attachments/assets/1842f151-0b17-4930-b10e-970c7f6957bd
 
 
 # Video Tutorial (for iOS 9 and newer)
-Coming soon.
+This video tutorial assumes you already have XAMPP installed.
+
+https://kappa.lol/cjcMKz
+
+
 # Troubleshooting
 **XAMPP throws errors when I try to do this!**\
 Make sure you ran the XAMPP Control Panel as an administrator.\
@@ -75,3 +71,7 @@ If it works, unfortunately, the simplest solution to this is either waiting, or 
 **I am stuck on the log in screen!**\
 Try entering "example@example.com" as the email and "123456" as the password.\
 If that doesn't work, use version 4.5.0, it has the "explore first" button, which you can tap to enter the app without logging in.
+**Musical.ly says "Network Issue" when logging in!**\
+From what I have seen, there are two reasons why this may occur:\
+1. PHP Warnings: PHP Warnings can cause the server's responses to be not valid for the Musical.ly app, because they show up in the server's responses. To fix this, open the file "C:\xampp\php\php.ini" in Notepad, and search for these strings: ```error_reporting=E_ALL & ~E_DEPRECATED & ~E_STRICT```, ```display_errors=On```, ```display_startup_errors=On``` and replace them with ```error_reporting=E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR```, ```display_errors=Off```, ```display_startup_errors=Off```, then save the file and restart the server.
+2. Wi-Fi conflict: If you have multiple Wi-Fi networks (example: one for high speed Wi-Fi and one for normal speed Wi-Fi), try connecting to another one of your Wi-Fi networks on your iDevice and then try logging in again.
