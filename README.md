@@ -55,7 +55,7 @@ https://github.com/user-attachments/assets/1842f151-0b17-4930-b10e-970c7f6957bd
 # Video Tutorial (for iOS 9 and newer)
 This video tutorial assumes you already have XAMPP installed.
 
-https://kappa.lol/cjcMKz
+[Watch the youtube.ly video tutorial for iOS 9 and newer.](https://kappa.lol/cjcMKz)
 
 
 # Troubleshooting
