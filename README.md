@@ -62,7 +62,7 @@ This video tutorial assumes you already have XAMPP installed.
 **XAMPP throws errors when I try to do this!**\
 Make sure you ran the XAMPP Control Panel as an administrator.\
 **Flex 3 crashes when I try to process the app!**\
-Get an older beta version of Flex 3.\
+Get an older beta version of Flex 3, like [this one](http://getdelta.co/packages/Flex3_3~Beta98.deb).\
 **The app can't connect to my server!**\
 Make sure that your legacy iOS device is connected to the same Wi-Fi network as the server.\
 **Some videos don't load!**\
