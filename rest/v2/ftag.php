@@ -62,7 +62,7 @@ echo json_encode([
 		"content" => $all_results,
 		"total" => $all_tags,
 		"number" => 0,
-		"size" => $all_tags + 5,
+		"size" => $all_tags + 4,
 		"totalPages" => 1,
 		"totalElements" => $all_tags,
 		"numberOfElements" => $all_tags,
